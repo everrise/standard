@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components>
+    <component name="config" class="jp.co.everrisesample.minimum01.Config" instance="singleton" autoBinding="auto" >
+        <!-- String config -->
+        <property name="STRING_CONFIG_1">"This is string setting value 1."</property>
+        <property name="STRING_CONFIG_2">"This is string setting value 2."</property>
+        <!-- Integer config -->
+        <property name="INT_CONFIG">774</property>
+        <!-- Long config -->
+        <property name="LONG_CONFIG">1024L</property>
+        <!-- Double config -->
+        <property name="DOUBLE_CONFIG">99.98D</property>
+        <!-- Boolean config -->
+        <property name="BOOLEAN_CONFIG_1">true</property>
+        <property name="BOOLEAN_CONFIG_2">false</property>
+        <!-- config list -->
+        <property name="STRING_CONFIG_LIST">
+            {
+                "item01",
+                "item02",
+                "item03",
+                "item04",
+                "item05"
+            }
+        </property>
+        <!-- config map -->
+        <property name="STRING_KEY_STRING_VALUE_CONFIG_MAP">
+            #{
+                "key01" : "value01",
+                "key02" : "value02",
+                "key03" : "value03",
+                "key04" : "value04",
+                "key05" : "value05"
+            }
+        </property>
+        <!-- It's salt for scrambling password -->
+        <property name="PASSWORD_SALT">"ASDFXCFHYKF8289AFVSMMNV221SQTT"</property>
+        
+    </component>
+</components>

@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+div.user-list-search-menu {
+	float: right;
+}
+
+div.user-list-search-result {
+	float: left;
+	width: 900px;
+}
+div.user-list-search-result-notExist {
+	float: left;
+	width: 900px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #EAEAEA;
+	padding: 20px;
+}
+
+table.user-list-result-table {
+	width: 100%;
+	border: 1px solid;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+
+table.user-list-result-table th {
+	border-bottom: 1px solid;
+	background-color: #E0E0E0;
+}
+table.user-list-result-table td.table_containts_dotted {
+	border-bottom: 1px dotted;
+	border-right: 1px dotted;
+}
+table.user-list-result-table td.table_containts_dotted_bottom {
+	border-bottom: 1px dotted;
+}
+th.table_title_id {
+	text-align: center;
+	width :5%;
+	border-right: 1px solid;
+}
+th.table_title_name {
+	text-align: center;
+	width :20%;
+	border-right: 1px solid;
+}
+th.table_title_group {
+	text-align: center;
+	width :30%;
+	border-right: 1px solid;
+}
+th.table_title_age {
+	text-align: center;
+	width :10%;
+	border-right: 1px solid;
+}
+th.table_title_memo {
+	text-align: center;
+	width :35%;
+}
+td.user-list-containts-id {
+	text-align: center;
+}
+td.user-list-containts-age {
+	text-align: right;
+}
