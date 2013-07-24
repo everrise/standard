@@ -20,7 +20,7 @@
 		<property name="password">""</property>
 	</component>
 	-->
-	
+
 	<!-- for H2
 	<component name="xaDataSource"
 		class="org.seasar.extension.dbcp.impl.XADataSourceImpl">
@@ -70,7 +70,7 @@
 		</initMethod>
 	</component>
 	-->
-	
+
 	<!-- for PostgreSQL -->
 	<!--
 	<component name="xaDataSource"
@@ -96,7 +96,7 @@
 			"jdbc:mysql://localhost:3306/sample01?characterEncoding=utf8"
 		</property>
 		<property name="user">"root"</property>
-		<property name="password">"hogehoge"</property>
+		<property name="password">""</property>
 	</component>
 
 

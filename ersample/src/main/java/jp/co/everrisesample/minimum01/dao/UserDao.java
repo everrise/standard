@@ -16,12 +16,12 @@ import org.seasar.framework.util.StringUtil;
 
 /**
  * {@link User}のサービスクラスです。
- * 
+ *
  */
 public class UserDao extends AbstractDao<User>{
-    
+
     /**
-     * 
+     *
      * @param id
      * @return
      */
@@ -29,7 +29,7 @@ public class UserDao extends AbstractDao<User>{
         return select().id(id).getSingleResult();
     }
     /**
-     * 
+     *
      * @param userId
      * @return
      */
@@ -43,13 +43,13 @@ public class UserDao extends AbstractDao<User>{
 
     /**
      * 識別子の昇順ですべてのエンティティを検索します。
-     * 
+     *
      * @return エンティティのリスト
      */
     public List<User> findAllOrderById(){
         return select().orderBy(asc(user().id())).getResultList();
     }
-    
+
     /**
      * return certain conditions entity
      * @param loginId
@@ -70,7 +70,7 @@ public class UserDao extends AbstractDao<User>{
                 .getSingleResult();
     }
     /**
-     * 
+     *
      * @param loginId
      * @return
      */
@@ -85,10 +85,10 @@ public class UserDao extends AbstractDao<User>{
                 )
                 .getResultList();
     }
-    
+
     /**
      * ユーザーを名前で検索する
-     * 
+     *
      * @param name
      * @param orderByItem
      * @param limit
@@ -114,7 +114,7 @@ public class UserDao extends AbstractDao<User>{
                 )
                 .getCount();
     }
-    
+
 
     /**
      * Update user data
@@ -136,7 +136,7 @@ public class UserDao extends AbstractDao<User>{
         this.update(user);
         return this.findById(user.id);
     }
-    
+
     /**
      * new insert
      * @param name
@@ -153,7 +153,7 @@ public class UserDao extends AbstractDao<User>{
         this.insert(user);
         return this.findById(user.id);
     }
-    
+
     /**
      * Make scramble password from raw password
      * @param rawPassword

@@ -34,16 +34,16 @@ public abstract class AbstractAction{
     protected HttpServletRequest request;
     @Resource
     protected HttpServletResponse response;
-    
+
     @Resource
     protected HttpSession session;
     @Resource
     protected Map<String, Cookie> cookie;
-    
+
     @Resource
     public Config config;
     public Properties appProperties = ResourceUtil.getProperties("application.properties");
-    
+
     /**
      * sessionの中にエラーメッセージがあるか否か
      * ActionMessagesUtil.hasErrorsのセッション版
@@ -56,10 +56,10 @@ public abstract class AbstractAction{
         }
         return false;
     }
-    
+
     /**
      * GETリクエストかどうかを返します。
-     * 
+     *
      * @return GETリクエストの場合 true
      */
     protected boolean isGet(){
@@ -68,7 +68,7 @@ public abstract class AbstractAction{
 
     /**
      * POSTリクエストかどうかを返します。
-     * 
+     *
      * @return POSTリクエストの場合 true
      */
     protected boolean isPost(){
@@ -99,7 +99,7 @@ public abstract class AbstractAction{
         this.response.addCookie(c);
     }
     /**
-     * remove user's cookie value 
+     * remove user's cookie value
      * @param key
      */
     protected void removeCookieValue(COOKIE_KEY key){
@@ -114,7 +114,7 @@ public abstract class AbstractAction{
         Cookie c = (Cookie)this.cookie.get(key.v);
         return (c != null);
     }
-    
+
     /**
      * Generate token, save the token in session and return the token value
      * @return
@@ -125,7 +125,7 @@ public abstract class AbstractAction{
         return (String) this.session.getAttribute(Globals.TRANSACTION_TOKEN_KEY);
     }
     /**
-     * Remove a token from session 
+     * Remove a token from session
      */
     protected void clearToken(){
         TokenProcessor.getInstance().resetToken(this.request);
