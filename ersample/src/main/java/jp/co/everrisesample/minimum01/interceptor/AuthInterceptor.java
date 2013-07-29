@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import jp.co.everrisesample.minimum01.dto.LoginUserDto;
 

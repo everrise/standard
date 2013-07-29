@@ -12,7 +12,6 @@ import org.seasar.framework.unit.DataAccessor;
 import org.seasar.framework.unit.PreparationType;
 import org.seasar.framework.unit.TestContext;
 import org.seasar.framework.unit.TestDataPreparer;
-import org.seasar.framework.unit.impl.TestDataPreparerImpl;
 import org.seasar.framework.util.ResourceUtil;
 
 public class CsvTestDataPreparer implements TestDataPreparer {
@@ -38,7 +37,7 @@ public class CsvTestDataPreparer implements TestDataPreparer {
 	public void addTestDataPath(final String path) {
 		testDataPaths.add(path);
 	}
-	
+
 	public void setCharset(String charset) {
 		this.charset = charset;
 	}

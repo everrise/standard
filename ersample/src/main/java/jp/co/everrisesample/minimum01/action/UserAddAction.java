@@ -16,7 +16,7 @@ import org.seasar.struts.enums.SaveType;
 
 /**
  * User edit Page
- * 
+ *
  */
 public class UserAddAction extends AbstractAction{
 
@@ -28,9 +28,9 @@ public class UserAddAction extends AbstractAction{
 
     @Resource
     protected UserDao userDao;
-    
+
     /**
-     * 
+     *
      * @return
      */
     @Auth

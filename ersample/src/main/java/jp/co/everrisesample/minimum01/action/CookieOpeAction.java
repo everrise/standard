@@ -1,20 +1,19 @@
 package jp.co.everrisesample.minimum01.action;
 
 import jp.co.everrisesample.minimum01.annotation.Auth;
-import jp.co.everrisesample.minimum01.annotation.PostOnly;
 import jp.co.everrisesample.minimum01.catalog.COOKIE_KEY;
 
 import org.seasar.struts.annotation.Execute;
 
 /**
- * 
+ *
  *
  */
 public class CookieOpeAction extends AbstractAction{
-    
+
     public String cookieValue;
     /**
-     * 
+     *
      */
     @Auth
     @Execute(validator = false)

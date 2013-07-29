@@ -10,7 +10,7 @@
 
 <c:if test="${ hasPrev }">
     <s:link href="?pg=${ p - 1 }&${ other }">
-        ←
+        PrePage
     </s:link>
 </c:if>
 <c:forEach var="i" begin="1" end="${ last }" step="1">
@@ -25,6 +25,6 @@
 </c:forEach>
 <c:if test="${ hasNext }">
     <s:link href="?pg=${ p + 1 }&${ other }">
-        →
+        NextPage
     </s:link>
 </c:if>
