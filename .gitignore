@@ -5,5 +5,6 @@ ersample/.classpath
 ersample/.tomcatplugin
 ersample/src/main/webapp/WEB-INF/classes/
 ersample/src/main/webapp/WEB-INF/lib/
+ersample/src/main/resources/jdbc.dicon
 
 
