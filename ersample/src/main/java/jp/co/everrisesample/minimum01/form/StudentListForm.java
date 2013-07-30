@@ -15,7 +15,8 @@ import org.seasar.framework.util.StringUtil;
  *
  */
 public class StudentListForm extends AbstractListForm{
-	public Long a;
+	//public Long a;
+	public String[] studentId;
 	/**
      * String for search
      */

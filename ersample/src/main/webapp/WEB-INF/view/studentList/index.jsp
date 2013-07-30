@@ -16,7 +16,7 @@
     </button>
 </s:form>
 ${ pageData.firstRow } - ${ pageData.lastRow } / total ${ pageData.total }
-
+<s:form>
 <table border="1">
     <tr>
         <th>
@@ -30,29 +30,28 @@ ${ pageData.firstRow } - ${ pageData.lastRow } / total ${ pageData.total }
             </ert:tablehead>
         </th>
         <th>
-			Delete
+			<s:submit property="deleteStudent">Delete</s:submit>
         </th>
     </tr>
     <c:forEach var="student" items="${ pageData.resultList }" varStatus="s">
-
         <tr>
-        <s:form>
+
             <td>
-            	<html:hidden property="a" value="${student.id}"/>
+            	<%-- <html:hidden property="a" value="${student.id}"/> --%>
                 <s:link href="/studentDetail/${ student.id }">
                     ${ f:h(student.id) }
                 </s:link>
             </td>
             <td>${ f:h(student.name) }</td>
             <td>
-            	<s:submit property="deleteStudent">Delete</s:submit>
+            	<html:checkbox property="studentId" value="${student.id}"></html:checkbox>
             </td>
-         </s:form>
+
         </tr>
     </c:forEach>
 
 </table>
-
+</s:form>
 <!-- ???? -->
 <ert:pagenavi p="${ studentListForm.page }"
               last="${ pageData.maxPage }"

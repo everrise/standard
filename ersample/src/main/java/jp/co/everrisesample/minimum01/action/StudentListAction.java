@@ -32,7 +32,6 @@ public class StudentListAction extends AbstractAction{
 
     public ListForPageDto<Student> pageData;
 
-
     /**
      * @author Du
      * @return
@@ -48,9 +47,16 @@ public class StudentListAction extends AbstractAction{
         return "index.jsp";
     }
 
+    /**
+     * @author Du
+     * delete student by studentId
+     * @return
+     */
     @Execute(validator = false, input="index.jsp")
     public String deleteStudent(){
-    	studentService.deleteStudent(studentListForm.a);
+    	for (int i = 0; i <= (studentListForm.studentId).length - 1; i++){
+    		studentService.deleteStudent(Long.parseLong(studentListForm.studentId[i]));
+		}
     	return "?redirect=true";
     }
 }
