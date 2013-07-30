@@ -2,6 +2,8 @@ package jp.co.everrisesample.minimum01.entity;
 
 import javax.annotation.Generated;
 import jp.co.everrisesample.minimum01.entity.ChartNames._ChartNames;
+import jp.co.everrisesample.minimum01.entity.ManufacturerNames._ManufacturerNames;
+import jp.co.everrisesample.minimum01.entity.ProductNames._ProductNames;
 import jp.co.everrisesample.minimum01.entity.StudentNames._StudentNames;
 import jp.co.everrisesample.minimum01.entity.UserNames._UserNames;
 
@@ -17,6 +19,22 @@ public class Names {
      */
     public static _ChartNames chart() {
         return new _ChartNames();
+    }
+
+    /**
+     * return name class of {@link Manufacturer}
+     * 
+     */
+    public static _ManufacturerNames manufacturer() {
+        return new _ManufacturerNames();
+    }
+
+    /**
+     * return name class of {@link Product}
+     * 
+     */
+    public static _ProductNames product() {
+        return new _ProductNames();
     }
 
     /**

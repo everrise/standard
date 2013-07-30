@@ -1,14 +1,10 @@
 package jp.co.everrisesample.minimum01.dao;
-import static jp.co.everrisesample.minimum01.entity.Names.student;
-import static org.seasar.extension.jdbc.operation.Operations.asc;
-import static org.seasar.extension.jdbc.operation.Operations.contains;
-import static org.seasar.extension.jdbc.operation.Operations.eq;
-import static org.seasar.extension.jdbc.operation.Operations.isNull;
 
 import java.util.List;
 
 import jp.co.everrisesample.minimum01.entity.Student;
-
+import static jp.co.everrisesample.minimum01.entity.Names.*;
+import static org.seasar.extension.jdbc.operation.Operations.*;
 import org.seasar.extension.jdbc.OrderByItem;
 
 public class StudentDao extends AbstractDao<Student>{

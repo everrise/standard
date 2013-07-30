@@ -7,6 +7,8 @@
 <ul>
     <li><s:link href="/userList/"><bean:message key="top.menu.userList" /></s:link></li>
     <li><s:link href="/studentList/"><bean:message key="top.menu.studentList" /></s:link></li>
+    <li><s:link href="/product/list"><bean:message key="top.menu.product.list" /></s:link></li>
+
 </ul>
 </tiles:put>
 </tiles:insert>
