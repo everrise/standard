@@ -16,7 +16,7 @@ import org.seasar.framework.util.StringUtil;
  */
 public class StudentListForm extends AbstractListForm{
 	//public Long a;
-	public String[] studentId;
+	public String[] studentId = new String[] {};
 	/**
      * String for search
      */
@@ -53,7 +53,6 @@ public class StudentListForm extends AbstractListForm{
         return "oc=" + this.getOrderColumn();
     }
     /**
-     * @author Yamazaki
      * 検索条件から順序オブジェクトを作成する
      *
      * @return

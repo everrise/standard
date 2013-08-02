@@ -9,6 +9,8 @@ import jp.co.everrisesample.minimum01.entity.Student;
 import jp.co.everrisesample.minimum01.form.StudentListForm;
 import jp.co.everrisesample.minimum01.service.StudentService;
 
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
 import org.seasar.extension.jdbc.OrderByItem;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
@@ -52,11 +54,17 @@ public class StudentListAction extends AbstractAction{
      * delete student by studentId
      * @return
      */
-    @Execute(validator = false, input="index.jsp")
+    @Execute(validator = false)
     public String deleteStudent(){
-    	for (int i = 0; i <= (studentListForm.studentId).length - 1; i++){
-    		studentService.deleteStudent(Long.parseLong(studentListForm.studentId[i]));
-		}
+    	if((studentListForm.studentId).length > 0){
+    		for (int i = 0; i <= (studentListForm.studentId).length - 1; i++){
+    			studentService.deleteStudent(Long.parseLong(studentListForm.studentId[i]));
+    		}
+    	}else{
+    		ActionMessages errors = new ActionMessages();
+    		errors.add("message", new ActionMessage("errors.delete"));
+    		return "index.jsp";
+    	}
     	return "?redirect=true";
     }
 }
