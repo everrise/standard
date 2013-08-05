@@ -10,7 +10,9 @@ public class ListForPageDto<T>{
     public int page;
     public int limit;
     public long total;
-    
+    public String name;
+    public String orderBy;
+
     /**
      * 最終ページを得る
      * @return

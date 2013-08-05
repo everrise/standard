@@ -16,9 +16,9 @@ public class UserService extends AbstractService{
 
     @Resource
     protected UserDao userDao;
-    
+
     /**
-     * 
+     *
      * @param name
      * @param loginId
      * @param password
@@ -28,7 +28,7 @@ public class UserService extends AbstractService{
         return userDao.insert(name, loginId, password);
     }
     /**
-     * 
+     *
      * @param userId
      * @param name
      * @param loginId
@@ -38,9 +38,9 @@ public class UserService extends AbstractService{
     public User updateUser(Long userId, String name, String loginId, String password){
         return userDao.update(userId, name, loginId, password);
     }
-    
+
     /**
-     * 
+     *
      * @param loginId
      * @return
      */
@@ -49,7 +49,7 @@ public class UserService extends AbstractService{
         return userList.isEmpty();
     }
     /**
-     * 
+     *
      * @param userId
      * @param loginId
      * @return
@@ -64,9 +64,9 @@ public class UserService extends AbstractService{
         }
         return false;
     }
-    
+
     /**
-     * 
+     *
      * @param name
      * @param orderByItem
      * @param limit
