@@ -26,34 +26,21 @@ public class ListForPageDto<T>{
         }
         return (int) (total / limit) + 1;
     }
-    /**
-     * 指定したページでの最初のレコードを得る
-     * @return
-     */
-    public int getFirstRow(){
-        return (page - 1) * limit + 1;
+
+    public boolean getHasFirst(){
+        return true;
     }
-    public int getLastRow(){
-        if(total == limit * page) {
-            return limit * page;
-        }
-        if(hasNext()){
-            return getFirstRow() + limit - 1;
-        }
-        return (int)(getFirstRow() + (total % limit)) - 1;
-    }
-    public boolean hasNext(){
-        return (getMaxPage() > 1 && page < getMaxPage());
-    }
-    /** jsp用別名 */
-    public boolean getHasNext(){
-        return hasNext();
-    }
-    public boolean hasPrev(){
-        return page > 1;
-    }
-    /** jsp用別名 */
+
     public boolean getHasPrev(){
-        return hasPrev();
+        return true;
     }
+
+    public boolean getHasNext(){
+        return true;
+    }
+
+    public boolean getHasLast(){
+        return true;
+    }
+
 }

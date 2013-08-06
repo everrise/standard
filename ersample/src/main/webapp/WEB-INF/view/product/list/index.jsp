@@ -27,12 +27,14 @@
                 </tr>
             </c:forEach>
         </table>
-
-        <ert:pagenavi p="${ userListForm.page }"
-              last="${ pageData.maxPage }"
-              other="${ userListForm.orderColumnForUrl }&${ userListForm.searchWordForUrl }"
-              hasPrev="${ pageData.hasPrev }"
-              hasNext="${ pageData.hasNext }"
-              />
+        <ert:paging p="${ listForm.page }"
+          total="${ pageData.maxPage }"
+          hasFirst="${ pageData.hasFirst }"
+          hasPrev="${ pageData.hasPrev }"
+          hasNext="${ pageData.hasNext }"
+          hasLast="${ pageData.hasLast }"
+          urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
+          urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
+          />
     </tiles:put>
 </tiles:insert>

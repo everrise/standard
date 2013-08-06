@@ -1,10 +1,9 @@
 package jp.co.everrisesample.minimum01;
 
-import javax.annotation.Generated;
 
 /**
  * SQL File const class
- * 
+ *
  */
 public final class SqlFiles {
 

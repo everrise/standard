@@ -18,7 +18,7 @@ public class ProductService extends AbstractService {
         ListForPageDto<Product> pageData = new ListForPageDto<Product>();
         pageData.resultList = productDao.findAllNamePageLimit(name,
                 orderByItem, limit, page);
-        pageData.total = pageData.resultList.size();
+        pageData.total = productDao.countAllName(name);
         pageData.page = page;
         pageData.limit = limit;
         return pageData;
