@@ -1,19 +1,20 @@
 package jp.co.everrisesample.minimum01.entity;
 
 import java.sql.Timestamp;
-import javax.annotation.Generated;
+
 import jp.co.everrisesample.minimum01.entity.ProductNames._ProductNames;
+
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
  * Summary of {@link Manufacturer}'s properties
- * 
+ *
  */
 public class ManufacturerNames {
 
     /**
      * return manufactureId's name
-     * 
+     *
      */
     public static PropertyName<Long> manufactureId() {
         return new PropertyName<Long>("manufactureId");
@@ -21,7 +22,7 @@ public class ManufacturerNames {
 
     /**
      * return name's name
-     * 
+     *
      */
     public static PropertyName<String> name() {
         return new PropertyName<String>("name");
@@ -29,7 +30,7 @@ public class ManufacturerNames {
 
     /**
      * return deletedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> deletedAt() {
         return new PropertyName<Timestamp>("deletedAt");
@@ -37,7 +38,7 @@ public class ManufacturerNames {
 
     /**
      * return updatedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> updatedAt() {
         return new PropertyName<Timestamp>("updatedAt");
@@ -45,7 +46,7 @@ public class ManufacturerNames {
 
     /**
      * return createdAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> createdAt() {
         return new PropertyName<Timestamp>("createdAt");
@@ -53,7 +54,7 @@ public class ManufacturerNames {
 
     /**
      * return product's property name
-     * 
+     *
      */
     public static _ProductNames product() {
         return new _ProductNames("product");
@@ -72,7 +73,7 @@ public class ManufacturerNames {
 
         /**
          * build instance
-         * 
+         *
          * @param name
          *            name
          */
@@ -82,7 +83,7 @@ public class ManufacturerNames {
 
         /**
          *  build instance
-         * 
+         *
          * @param parent
          *            parent
          * @param name
@@ -134,7 +135,7 @@ public class ManufacturerNames {
 
         /**
          * return product's property name
-         * 
+         *
          */
         public _ProductNames product() {
             return new _ProductNames(this, "product");

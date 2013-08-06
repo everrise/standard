@@ -1,18 +1,18 @@
 package jp.co.everrisesample.minimum01.entity;
 
 import java.sql.Timestamp;
-import javax.annotation.Generated;
+
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
  * Summary of {@link Chart}'s properties
- * 
+ *
  */
 public class ChartNames {
 
     /**
      * return id's name
-     * 
+     *
      */
     public static PropertyName<Integer> id() {
         return new PropertyName<Integer>("id");
@@ -20,7 +20,7 @@ public class ChartNames {
 
     /**
      * return chart's name
-     * 
+     *
      */
     public static PropertyName<String> chart() {
         return new PropertyName<String>("chart");
@@ -28,7 +28,7 @@ public class ChartNames {
 
     /**
      * return chartId's name
-     * 
+     *
      */
     public static PropertyName<Integer> chartId() {
         return new PropertyName<Integer>("chartId");
@@ -36,7 +36,7 @@ public class ChartNames {
 
     /**
      * return chartCountry's name
-     * 
+     *
      */
     public static PropertyName<String> chartCountry() {
         return new PropertyName<String>("chartCountry");
@@ -44,7 +44,7 @@ public class ChartNames {
 
     /**
      * return chartQuantity's name
-     * 
+     *
      */
     public static PropertyName<Integer> chartQuantity() {
         return new PropertyName<Integer>("chartQuantity");
@@ -52,7 +52,7 @@ public class ChartNames {
 
     /**
      * return deletedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> deletedAt() {
         return new PropertyName<Timestamp>("deletedAt");
@@ -60,7 +60,7 @@ public class ChartNames {
 
     /**
      * return updatedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> updatedAt() {
         return new PropertyName<Timestamp>("updatedAt");
@@ -68,7 +68,7 @@ public class ChartNames {
 
     /**
      * return createdAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> createdAt() {
         return new PropertyName<Timestamp>("createdAt");
@@ -87,7 +87,7 @@ public class ChartNames {
 
         /**
          * build instance
-         * 
+         *
          * @param name
          *            name
          */
@@ -97,7 +97,7 @@ public class ChartNames {
 
         /**
          *  build instance
-         * 
+         *
          * @param parent
          *            parent
          * @param name

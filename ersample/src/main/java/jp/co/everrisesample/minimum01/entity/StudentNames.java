@@ -1,18 +1,18 @@
 package jp.co.everrisesample.minimum01.entity;
 
 import java.sql.Timestamp;
-import javax.annotation.Generated;
+
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
  * Summary of {@link Student}'s properties
- * 
+ *
  */
 public class StudentNames {
 
     /**
      * return id's name
-     * 
+     *
      */
     public static PropertyName<Long> id() {
         return new PropertyName<Long>("id");
@@ -20,7 +20,7 @@ public class StudentNames {
 
     /**
      * return name's name
-     * 
+     *
      */
     public static PropertyName<String> name() {
         return new PropertyName<String>("name");
@@ -28,7 +28,7 @@ public class StudentNames {
 
     /**
      * return address's name
-     * 
+     *
      */
     public static PropertyName<String> address() {
         return new PropertyName<String>("address");
@@ -36,7 +36,7 @@ public class StudentNames {
 
     /**
      * return email's name
-     * 
+     *
      */
     public static PropertyName<String> email() {
         return new PropertyName<String>("email");
@@ -44,7 +44,7 @@ public class StudentNames {
 
     /**
      * return deletedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> deletedAt() {
         return new PropertyName<Timestamp>("deletedAt");
@@ -52,7 +52,7 @@ public class StudentNames {
 
     /**
      * return updatedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> updatedAt() {
         return new PropertyName<Timestamp>("updatedAt");
@@ -60,7 +60,7 @@ public class StudentNames {
 
     /**
      * return createdAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> createdAt() {
         return new PropertyName<Timestamp>("createdAt");
@@ -79,7 +79,7 @@ public class StudentNames {
 
         /**
          * build instance
-         * 
+         *
          * @param name
          *            name
          */
@@ -89,7 +89,7 @@ public class StudentNames {
 
         /**
          *  build instance
-         * 
+         *
          * @param parent
          *            parent
          * @param name

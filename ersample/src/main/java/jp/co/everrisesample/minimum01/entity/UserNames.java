@@ -2,18 +2,18 @@ package jp.co.everrisesample.minimum01.entity;
 
 import java.sql.Date;
 import java.sql.Timestamp;
-import javax.annotation.Generated;
+
 import org.seasar.extension.jdbc.name.PropertyName;
 
 /**
  * Summary of {@link User}'s properties
- * 
+ *
  */
 public class UserNames {
 
     /**
      * return id's name
-     * 
+     *
      */
     public static PropertyName<Long> id() {
         return new PropertyName<Long>("id");
@@ -21,7 +21,7 @@ public class UserNames {
 
     /**
      * return name's name
-     * 
+     *
      */
     public static PropertyName<String> name() {
         return new PropertyName<String>("name");
@@ -29,7 +29,7 @@ public class UserNames {
 
     /**
      * return loginId's name
-     * 
+     *
      */
     public static PropertyName<String> loginId() {
         return new PropertyName<String>("loginId");
@@ -37,7 +37,7 @@ public class UserNames {
 
     /**
      * return password's name
-     * 
+     *
      */
     public static PropertyName<String> password() {
         return new PropertyName<String>("password");
@@ -45,7 +45,7 @@ public class UserNames {
 
     /**
      * return departmentId's name
-     * 
+     *
      */
     public static PropertyName<Long> departmentId() {
         return new PropertyName<Long>("departmentId");
@@ -53,7 +53,7 @@ public class UserNames {
 
     /**
      * return birthday's name
-     * 
+     *
      */
     public static PropertyName<Date> birthday() {
         return new PropertyName<Date>("birthday");
@@ -61,7 +61,7 @@ public class UserNames {
 
     /**
      * return memo's name
-     * 
+     *
      */
     public static PropertyName<String> memo() {
         return new PropertyName<String>("memo");
@@ -69,7 +69,7 @@ public class UserNames {
 
     /**
      * return deletedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> deletedAt() {
         return new PropertyName<Timestamp>("deletedAt");
@@ -77,7 +77,7 @@ public class UserNames {
 
     /**
      * return updatedAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> updatedAt() {
         return new PropertyName<Timestamp>("updatedAt");
@@ -85,7 +85,7 @@ public class UserNames {
 
     /**
      * return createdAt's name
-     * 
+     *
      */
     public static PropertyName<Timestamp> createdAt() {
         return new PropertyName<Timestamp>("createdAt");
@@ -104,7 +104,7 @@ public class UserNames {
 
         /**
          * build instance
-         * 
+         *
          * @param name
          *            name
          */
@@ -114,7 +114,7 @@ public class UserNames {
 
         /**
          *  build instance
-         * 
+         *
          * @param parent
          *            parent
          * @param name
