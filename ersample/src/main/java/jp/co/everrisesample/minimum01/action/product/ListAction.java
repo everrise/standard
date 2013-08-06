@@ -35,8 +35,12 @@ public class ListAction extends AbstractAction {
      */
     @Execute(validator = false)
     public String index() {
-
-        return "index.jsp";
+        listForm.limit = "10";
+        listForm.page = "1";
+        listForm.orderColumn = "name";
+        listForm.orderBy = "asc";
+        listForm.name = "";
+        return list();
     }
 
     /**

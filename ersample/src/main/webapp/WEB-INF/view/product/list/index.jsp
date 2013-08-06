@@ -36,5 +36,19 @@
           urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
           urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
           />
+
+<script type="text/javascript">
+$(function() {
+	$('.pagination').pagin({
+		fontSize : '300%',
+		doBefore : function(){
+			console.log("before ne");
+		},
+		doAfter : function() {
+			console.log("after ne");
+		}
+	});
+});
+</script>
     </tiles:put>
 </tiles:insert>

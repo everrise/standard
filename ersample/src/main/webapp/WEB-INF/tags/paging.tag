@@ -57,8 +57,3 @@
 </c:if>
 </ul>
 </div>
-<script type="text/javascript">
-$(function() {
-	$('.pagination').
-});
-</script>
