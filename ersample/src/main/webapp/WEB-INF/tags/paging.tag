@@ -28,9 +28,9 @@
     </li>
 </c:if>
 <li class="pagin-move-left hide">
-	<a>
-		<<
-	</a>
+<a href="#">
+	<<
+</a>
 </li>
 <c:forEach var="i" begin="1" end="${ total}" step="1">
     <c:if test="${ p != i }">
@@ -47,9 +47,9 @@
     </c:if>
 </c:forEach>
 <li class="pagin-move-right hide">
-	<a>
-		>>
-	</a>
+<a href="#">
+	>>
+</a>
 </li>
 <c:if test="${ hasNext }">
     <li class="pagin-next">

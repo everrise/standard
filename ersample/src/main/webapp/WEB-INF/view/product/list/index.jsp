@@ -43,7 +43,6 @@ $(function() {
 		fontSize : '300%',
 		currentPage: ${listForm.page},
 		maxDisplayPage: ${pageData.maxPage > 5 ? 5 : pageData.maxPage},
-		nonPage: 6,
 		doBefore : function(){
 			console.log("before ne");
 		},
