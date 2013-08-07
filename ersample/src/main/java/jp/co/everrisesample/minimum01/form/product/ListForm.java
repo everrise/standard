@@ -22,7 +22,7 @@ public class ListForm {
     }
 
     @Required(target = "list", arg0 = @Arg(key = "product.list.error.page", resource = true))
-    @IntRange(min=1, max = 1000, msg=@Msg(key="product.list.error.limit.invalid"))
+    @IntRange(min=1, max=1000, msg=@Msg(key="product.list.error.limit.invalid"))
     @IntegerType
     public String page;
 

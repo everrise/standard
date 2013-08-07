@@ -2,13 +2,13 @@ package jp.co.everrisesample.minimum01.action.product;
 
 import javax.annotation.Resource;
 
-import jp.co.everrise.utils.Converter;
 import jp.co.everrisesample.minimum01.action.AbstractAction;
 import jp.co.everrisesample.minimum01.dto.ListForPageDto;
 import jp.co.everrisesample.minimum01.entity.Product;
 import jp.co.everrisesample.minimum01.form.product.ListForm;
 import jp.co.everrisesample.minimum01.service.ProductService;
 
+import org.apache.commons.lang3.math.NumberUtils;
 import org.seasar.extension.jdbc.OrderByItem;
 import org.seasar.struts.annotation.ActionForm;
 import org.seasar.struts.annotation.Execute;
@@ -59,8 +59,8 @@ public class ListAction extends AbstractAction {
     public String list() {
         OrderByItem orderByItem = new OrderByItem(listForm.orderColumn + " " + listForm.orderBy);// listForm.orderColumnAsOrderByItem();
         this.pageData = productService.findAllNamePageLimit(listForm.name,
-                orderByItem, Converter.stringToInt(listForm.limit),
-                Converter.stringToInt(listForm.page));
+                orderByItem, NumberUtils.toInt(listForm.limit, 1),
+                NumberUtils.toInt(listForm.page, 1));
         return "index.jsp";
     }
 /*

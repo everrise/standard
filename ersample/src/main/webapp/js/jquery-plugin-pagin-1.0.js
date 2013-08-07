@@ -14,10 +14,15 @@
 	    	//Execute code
 	    	 var $this = $( this );
 	    	 console.log($this);
-	    	 var $totalPage = $this.find('li').length - settings.nonPage;
+	    	 var $totalPage = $this.find('.pagin').length;
 	    	 console.log($totalPage);
 	    	 if($totalPage > settings.maxDisplayPage){
-	    		 
+	    		 if(settings.currentPage >= (settings.maxDisplayPage / 2 + 1)){
+	    			 console.log("left");
+	    		 }
+	    		 if(settings.currentPage <= $totalPage - (settings.maxDisplayPage / 2)){
+	    			 console.log("right");
+	    		 }
 	    	 }
 	    	//Execute code
 	    	 $.isFunction( options.doAfter ) && options.doAfter.call( this );
@@ -29,8 +34,8 @@
 		 doAfter : function() {},
 	     color : "#F00",
 	     fontSize : "1.2em",
-	     maxDisplayPage : 5,
+	     maxDisplayPage: 5,
 	     currentPage : 1,
-	     nonPage : 4
+	     nonPage : 6
 	 }
 }(jQuery));

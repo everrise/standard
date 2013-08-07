@@ -14,42 +14,52 @@
 <div style="text-align: center;">
 <ul class="pagination">
 <c:if test="${ hasFirst }">
-    <li>
+    <li class="pagin-first">
         <s:link href="">
             First
         </s:link>
     </li>
 </c:if>
 <c:if test="${ hasPrev }">
-    <li>
+    <li class="pagin-prev">
         <s:link href="">
             Prev
         </s:link>
     </li>
 </c:if>
+<li class="pagin-move-left hide">
+	<a>
+		<<
+	</a>
+</li>
 <c:forEach var="i" begin="1" end="${ total}" step="1">
     <c:if test="${ p != i }">
-        <li>
+        <li class="pagin">
             <s:link href="${ urlHead }${ i }${ urlTail }">
                 <span>${ i }</span>
             </s:link>
         </li>
     </c:if>
     <c:if test="${ p == i }">
-        <li>
+        <li class="pagin">
             <span>${ i }</span>
         </li>
     </c:if>
 </c:forEach>
+<li class="pagin-move-right hide">
+	<a>
+		>>
+	</a>
+</li>
 <c:if test="${ hasNext }">
-    <li>
+    <li class="pagin-next">
         <s:link href="">
             Next
         </s:link>
     </li>
 </c:if>
 <c:if test="${ hasLast }">
-    <li>
+    <li class="pagin-last">
         <s:link href="">
             Last
         </s:link>
