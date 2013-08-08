@@ -13,24 +13,19 @@
 
 <div style="text-align: center;">
 <ul class="pagination">
-<c:if test="${ hasFirst }">
-    <li class="pagin-first">
+<li class="pagin-first${hasFirst ? '' : ' sleep'}">
         <s:link href="${ urlHead }1${ urlTail }">
-            First
+            <span>First</span>
         </s:link>
-    </li>
-</c:if>
-<c:if test="${ hasPrev }">
-    <li class="pagin-prev">
+</li>
+<li class="pagin-prev${hasPrev ? '' : ' sleep'}">
         <s:link href="${ urlHead }${ p - 1 }${ urlTail }">
-            Prev
+            <span>Prev</span>
         </s:link>
-    </li>
-</c:if>
-<li class="pagin-left hide">
-<a href="#">
-	<<
-</a>
+</li>
+<li class="pagin-left">
+        <a href="#"><span>&lt;&lt;</span>
+        </a>
 </li>
 <c:forEach var="i" begin="1" end="${ total}" step="1">
     <c:if test="${ p != i }">
@@ -41,29 +36,23 @@
         </li>
     </c:if>
     <c:if test="${ p == i }">
-        <li class="pagin">
-            <span>${ i }</span>
+        <li class="pagin sleep">
+            <a><span>${ i }</span></a>
         </li>
     </c:if>
 </c:forEach>
-<li class="pagin-right hide">
-<a href="#">
-	>>
-</a>
+<li class="pagin-right">
+    <a href="#"><span>&gt;&gt;</span></a>
 </li>
-<c:if test="${ hasNext }">
-    <li class="pagin-next">
-        <s:link href="${ urlHead }${ p + 1 }${ urlTail }">
-            Next
-        </s:link>
-    </li>
-</c:if>
-<c:if test="${ hasLast }">
-    <li class="pagin-last">
-        <s:link href="${ urlHead }${ total }${ urlTail }">
-            Last
-        </s:link>
-    </li>
-</c:if>
+<li class="pagin-next${hasNext ? '' : ' sleep'}">
+<s:link href="${ urlHead }${ p + 1 }${ urlTail }">
+    <span>Next</span>
+</s:link>
+</li>
+<li class="pagin-last${hasLast ? '' : ' sleep'}">
+<s:link href="${ urlHead }${ total }${ urlTail }">
+    <span>Last</span>
+</s:link>
+</li>
 </ul>
 </div>

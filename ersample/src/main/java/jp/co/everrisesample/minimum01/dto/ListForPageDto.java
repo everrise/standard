@@ -42,28 +42,28 @@ public class ListForPageDto<T> {
 		return (int) (getFirstRow() + (total % limit)) - 1;
 	}
 
-	public boolean hasNext() {
-		return (getMaxPage() > 1 && page < getMaxPage());
-	}
+    public boolean hasPrev() {
+        return page > 1;
+    }
 
 	public boolean getHasFirst() {
-		return true;
+	    return hasPrev();
 	}
+
+    public boolean getHasPrev() {
+        return hasPrev();
+    }
+
+    public boolean hasNext() {
+        return (getMaxPage() > 1 && page < getMaxPage());
+    }
 
 	public boolean getHasNext() {
 		return hasNext();
 	}
 
-	public boolean hasPrev() {
-		return page > 1;
-	}
-
-	public boolean getHasPrev() {
-		return hasPrev();
-	}
-
-	public boolean getHasLast() {
-		return true;
-	}
+    public boolean getHasLast() {
+        return hasNext();
+    }
 
 }

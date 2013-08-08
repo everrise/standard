@@ -1,5 +1,7 @@
 /**
  * @author Tai Sang
+ * @version A.0001
+ * @since 2013060
  */
 
 (function($) {
@@ -22,6 +24,12 @@
             $vars.half = $vars.maxPage / 2;
 
             $.fn.pagin.render($vars);
+
+            $(this).on('click', 'li.sleep', function(e){
+            	e.preventDefault();
+            	e.stopPropagation();
+            });
+
             // Execute code end
             $.isFunction(options.doAfter) && options.doAfter.call(this);//doAfter function is execute lastly
         });
@@ -47,14 +55,14 @@
                 }
             }
             if ($vars.currentPage >= $vars.half + 1) {//when left is available
-                $vars.left.removeClass('hide');
+                $vars.left.removeClass('sleep');
             } else {//dont need to show left due to no element on left hand side
-                $vars.left.addClass('hide');
+                $vars.left.addClass('sleep');
             }
             if ($vars.currentPage <= ($vars.pageLength - $vars.half)) {//when right is available
-                $vars.right.removeClass('hide');
+                $vars.right.removeClass('sleep');
             } else {//dont need to show right due to no element on right hand side
-                $vars.right.addClass('hide');
+                $vars.right.addClass('sleep');
             }
 
             /*
@@ -95,15 +103,15 @@
         }
 
         if($index <= 1){
-            $vars.left.addClass('hide');
+            $vars.left.addClass('sleep');
         } else{
-            $vars.left.removeClass('hide');
+            $vars.left.removeClass('sleep');
         }
 
         if($index > $vars.pageLength - $showPage - 1){
-            $vars.right.addClass('hide');
+            $vars.right.addClass('sleep');
         } else{
-            $vars.right.removeClass('hide');
+            $vars.right.removeClass('sleep');
         }
     }
 
