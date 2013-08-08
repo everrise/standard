@@ -37,19 +37,29 @@
           urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
           />
 
+        <br/>
+        <ert:paging p="${ listForm.page }"
+          total="${ pageData.maxPage }"
+          hasFirst="${ pageData.hasFirst }"
+          hasPrev="${ pageData.hasPrev }"
+          hasNext="${ pageData.hasNext }"
+          hasLast="${ pageData.hasLast }"
+          urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
+          urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
+          />
+
 <script type="text/javascript">
 $(function() {
-	$('.pagination').pagin({
-		fontSize : '300%',
-		currentPage: ${listForm.page},
-		maxDisplayPage: ${pageData.maxPage > 5 ? 5 : pageData.maxPage},
-		doBefore : function(){
-			console.log("before ne");
-		},
-		doAfter : function() {
-			console.log("after ne");
-		}
-	});
+    $('.pagination').pagin({
+        currentPage: ${listForm.page},
+        maxPage: ${pageData.maxPage > 5 ? 5 : pageData.maxPage},
+        doBefore : function(){
+            console.log("before ne");
+        },
+        doAfter : function() {
+            console.log("after ne");
+        }
+    });
 });
 </script>
     </tiles:put>

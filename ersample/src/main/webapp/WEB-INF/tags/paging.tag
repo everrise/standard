@@ -15,19 +15,19 @@
 <ul class="pagination">
 <c:if test="${ hasFirst }">
     <li class="pagin-first">
-        <s:link href="">
+        <s:link href="${ urlHead }1${ urlTail }">
             First
         </s:link>
     </li>
 </c:if>
 <c:if test="${ hasPrev }">
     <li class="pagin-prev">
-        <s:link href="">
+        <s:link href="${ urlHead }${ p - 1 }${ urlTail }">
             Prev
         </s:link>
     </li>
 </c:if>
-<li class="pagin-move-left hide">
+<li class="pagin-left hide">
 <a href="#">
 	<<
 </a>
@@ -46,21 +46,21 @@
         </li>
     </c:if>
 </c:forEach>
-<li class="pagin-move-right hide">
+<li class="pagin-right hide">
 <a href="#">
 	>>
 </a>
 </li>
 <c:if test="${ hasNext }">
     <li class="pagin-next">
-        <s:link href="">
+        <s:link href="${ urlHead }${ p + 1 }${ urlTail }">
             Next
         </s:link>
     </li>
 </c:if>
 <c:if test="${ hasLast }">
     <li class="pagin-last">
-        <s:link href="">
+        <s:link href="${ urlHead }${ total }${ urlTail }">
             Last
         </s:link>
     </li>
