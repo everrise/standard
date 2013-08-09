@@ -7,6 +7,15 @@
     <tiles:put name="content" type="string">
         <html:errors />
         <br />
+         <ert:paging p="${ listForm.page }"
+          total="${ pageData.maxPage }"
+          hasFirst="${ pageData.hasFirst }"
+          hasPrev="${ pageData.hasPrev }"
+          hasNext="${ pageData.hasNext }"
+          hasLast="${ pageData.hasLast }"
+          urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
+          urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
+          />
         <table class="table table-striped table-bordered">
             <tr>
                 <th>
@@ -36,18 +45,6 @@
           urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
           urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
           />
-
-        <br/>
-        <ert:paging p="${ listForm.page }"
-          total="${ pageData.maxPage }"
-          hasFirst="${ pageData.hasFirst }"
-          hasPrev="${ pageData.hasPrev }"
-          hasNext="${ pageData.hasNext }"
-          hasLast="${ pageData.hasLast }"
-          urlHead="${ request.contextPath}/product/list/${ listForm.limit }/"
-          urlTail="/${ listForm.orderColumn }/${ listForm.orderBy }/${ listForm.name }"
-          />
-
 <script type="text/javascript">
 $(function() {
     $('.pagination').pagin({
