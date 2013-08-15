@@ -5,47 +5,68 @@
  */
 
 (function($) {
-    $.fn.fakeBox = function(options) {
-        $.fn.fakeBox.settings = $.extend({}, $.fn.fakeBox.defaults, options);// load options and defaults, passing to $vars
-
+    $.fn.fakeCheck = function(options) {
+        $.fn.fakeCheck.settings = $.extend({}, $.fn.fakeCheck.defaults, options);// load options and defaults, passing to $vars
+		var $syncId = 0;
         return this.each(function() {
-            $.isFunction(options.doBefore) && options.doBefore.call(this);//doBefore function is execute first
-            // Execute code start
-            var $vars = $.extend({}, $.fn.fakeBox.settings, $.fn.fakeBox.getVars());
-            $vars.target = $(this);
-
-            $.fn.fakeBox.render($vars);
-
-            // Execute code end
-            $.isFunction(options.doAfter) && options.doAfter.call(this);//doAfter function is execute lastly
+        	try{
+        		$syncId++;
+	            $.isFunction(options.doBefore) && options.doBefore.call(this);//doBefore function is execute first
+	            // Execute code start
+	            var $vars = $.extend({}, $.fn.fakeCheck.settings, $.fn.fakeCheck.getVars());
+	            $vars.target = $(this);
+	            $.fn.fakeCheck.render($vars, 'chkbox-' + $syncId);
+	            // Execute code end
+	            $.isFunction(options.doAfter) && options.doAfter.call(this);//doAfter function is execute lastly
+        	} catch(e){
+        		console.log(e);
+        	}
         });
     };
 
-    $.fn.fakeBox.render = function($vars) {
-
+    $.fn.fakeCheck.render = function($vars, $syncId) {
+        var $fb = $('<span>');//create new div to replace old input
+        $fb.attr('tabindex', $vars.target.attr('tabindex'));//keep old tab index
+        $fb.attr('class', $vars.fclass);
+        $fb.attr($vars.syncAttr, $syncId);//sync 2 object
+        $vars.target.attr($vars.syncAttr, $syncId);
+        if($vars.target.attr('disabled') != null){
+        	$fb.addClass('disabled');
+        }
+        if($vars.target.attr('readonly') != null){
+        	$fb.addClass('readonly');
+        }
+        $fb.on('click keypress', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+        	if( !$fb.hasClass('disabled') && !$fb.hasClass('readonly') ){
+        		$('input[' + $vars.syncAttr + '=' + $(this).attr($vars.syncAttr) + ']').click();
+            }
+        });
+        $vars.target.on('change', function(){
+			if($(this).prop('checked') == true){
+				$('.' + $vars.fclass + '[' + $vars.syncAttr + '=' + $(this).attr($vars.syncAttr) + ']').addClass('checked');
+			} else{
+				$('.' + $vars.fclass + '[' + $vars.syncAttr + '=' + $(this).attr($vars.syncAttr) + ']').removeClass('checked');
+			}
+		});
+        $vars.target.after($fb);
+        //$vars.target.hide();
     }
 
     // default value, use when options are missing
-    $.fn.fakeBox.defaults = {
+    $.fn.fakeCheck.defaults = {
         doBefore : function() {
         },
         doAfter : function() {
-        }
+        },
+        fclass : 'fake-check',
+        syncAttr : 'data-sync'
     }
 
-    //this create an empty object hold all necessary variables
-    $.fn.fakeBox.getVars = function(){
+    $.fn.fakeCheck.getVars = function(){
         return {
-            id : null,
-            name : null,
-            _class : null,
-            type : null,
-            text : null,
-            checked : null,
-            disabled : null,
-            readonly : null,
-            value : null
+        	target : null
         }
     }
-
 }(jQuery));

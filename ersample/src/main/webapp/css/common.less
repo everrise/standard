@@ -1,0 +1,30 @@
+.hide{
+	display: none;
+}
+
+.pagination>li.sleep>a span{
+	opacity: 0.8;
+	color: #000;
+}
+
+.fake-checkbox{
+	input{
+        width: 0;
+        height: 0;
+        &:checked + label{
+            background-position: 0 -20px;
+        }
+	}
+	label{
+        padding-left: 22px;
+        height: 20px;
+        display: inline-block;
+        line-height: 20px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 15px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url('img/web-two-style.png');
+	}
+}
