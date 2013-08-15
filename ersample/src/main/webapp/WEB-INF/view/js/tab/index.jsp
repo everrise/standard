@@ -6,43 +6,32 @@
     <tiles:put name="style" value="login/index" />
     <tiles:put name="js1" value="js/jquery-plugin-fake-box-1.0.js" />
     <tiles:put name="content" type="string">
+        <div style="margin-left: 100px;">
+                <input class="fkbox" type="checkbox" value="4" id="input1" name="input1" tabindex="1"/>
+                <label for="input1">Check box 1</label>
+                <br/>
+                <input class="fkbox" type="checkbox" value="5" id="input2" name="input2" tabindex="2"/>
+                <label for="input2">Check box 2</label>
+                <br/>
+                <input class="fkbox" type="checkbox" value="6" name="input3" tabindex="3"/>
+                <label>Check box 3</label>
+                <br/>
+                <input class="fkbox" type="checkbox" value="5" tabindex="4"/>
+                <label>Check box 4</label>
+                <br/>
+                <input class="fkbox" type="checkbox" value="5" name="input5" tabindex="5"/>
 
-    <style>
-        .fake-check{
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background-color: #DF3;
-            color: #E22;
-        }
-        .fake-check.readonly{
-            background-color: #DA3;
-        }
-        .fake-check.disabled{
-            background-color: #D03;
-            cursor: disabled;
-        }
+<br><br>
+                <input class="fkbox" type="radio" value="7" id="input7" name="radio" tabindex="7"/>
+                <label for="input7">radio 1</label>
+                <input class="fkbox" type="radio" value="8" id="input8" name="radio" tabindex="8"/>
+                <label for="input8">radio 2</label>
 
-    </style>
-    <div>
-        <label for="afa">afa</label>
-        <input class="js" type="checkbox" value="1" id="afa" name="afa" tabindex="1"/>
-        <label for="afb">afb</label>
-        <input class="js" type="checkbox" value="2" id="afb" name="afb" tabindex="2" readonly/>
-        <label for="afc">afc</label>
-        <input class="js" type="checkbox" value="3" id="afc" name="afc" tabindex="3" disabled/>
-</div>
-<div>
-        <span class="fake-checkbox" tabindex="4">
-            <input type="checkbox" value="4" id="afe" name="afe"/>
-            <label for="afe">afe</label>
-        </span>
-</div>
+
+        </div>
         <script type="text/javascript">
         $(function() {
-            $('input.js').fakeCheck({
-            	fclass : 'fake-check'
-            });
+            $('.fkbox').fakeCheck();
         });
         </script>
     </tiles:put>

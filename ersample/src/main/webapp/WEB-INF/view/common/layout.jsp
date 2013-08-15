@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="${contextPath}/css/bootstrap.min.css" />
     <script type="text/javascript" src="${contextPath}/js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="${contextPath}/js/jquery-plugin-pagin-1.0.js"></script>
-    <script type="text/javascript" src="${contextPath}/js/jquery-plugin-fake-box-1.0.js"></script>
+    <script type="text/javascript" src="${contextPath}/js/jquery-plugin-fb-1.0.js"></script>
     <c:set var="style"><tiles:getAsString name="style" ignore="true" /></c:set>
     <c:if test="${ empty(style) }"><c:set var="style" value="style" /></c:if>
     <link rel="stylesheet" href="${contextPath}/css/${style}.css" />

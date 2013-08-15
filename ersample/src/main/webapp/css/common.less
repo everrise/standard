@@ -7,15 +7,16 @@
 	color: #000;
 }
 
-.fake-checkbox{
+.fcb-wrap, .frb-wrap{
+    display: inline-block;
+    margin-bottom: 5px;
 	input{
-        width: 0;
-        height: 0;
         &:checked + label{
             background-position: 0 -20px;
         }
 	}
 	label{
+	    margin-bottom: 0;
         padding-left: 22px;
         height: 20px;
         display: inline-block;
@@ -25,6 +26,11 @@
         font-size: 15px;
         vertical-align: middle;
         cursor: pointer;
-        background-image: url('img/web-two-style.png');
 	}
+}
+.fcb-wrap label{
+    background-image: url('img/web-two-style.png');
+}
+.frb-wrap label{
+    background-image: url('img/fake-radio.png');
 }
