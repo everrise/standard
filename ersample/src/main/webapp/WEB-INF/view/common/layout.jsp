@@ -12,6 +12,12 @@
     <c:if test="${ empty(style) }"><c:set var="style" value="style" /></c:if>
     <link rel="stylesheet" href="${contextPath}/css/${style}.css" />
 
+<link rel="stylesheet" href="${contextPath}/css/jquery.jscrollpane.css" />
+<link rel="stylesheet" href="${contextPath}/css/customSelectBox.css" />
+<script src="${contextPath}/js/jScrollPane.js"></script>
+<script src="${contextPath}/js/jquery.mousewheel.js"></script>
+<script src="${contextPath}/js/SelectBox.js"></script>
+
 </head>
 <body>
     <tiles:insert page="header.jsp" />

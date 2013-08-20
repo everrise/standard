@@ -7,12 +7,12 @@
     <tiles:put name="js1" value="js/jquery-plugin-fake-box-1.0.js" />
     <tiles:put name="content" type="string">
         <div style="margin-left: 100px;">
-            <select class="need-to-fake">
+            <select class="custom">
                 <option>A</option>
-                <option>A</option>
-                <option>A</option>
-                <option>A</option>
-                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
                 <option>A</option>
                 <option>A</option>
                 <option>A</option>
@@ -29,7 +29,17 @@
         </div>
         <script type="text/javascript">
         $(function() {
-            $('.fkbox').fakeCheck();
+        	var $body = $('body');
+        	if( ! $body.hasClass('hasJS') ){
+        		$body.addClass('hasJS');
+        	}
+            $("select.custom").each(function() {
+                var sb = new SelectBox({
+                    selectbox: $(this),
+                    height: 150,
+                    width: 200
+                });
+            });
         });
         </script>
     </tiles:put>
