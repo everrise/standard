@@ -1,22 +1,32 @@
-.hide{
-	display: none;
+// Hover & Active
+a , a:hover , a:active {
+    outline: 0;
+}:focus {
+    -moz-outline-style: none;
 }
 
-.pagination>li.sleep>a span{
-	opacity: 0.8;
-	color: #000;
+.hide {
+    display: none;
 }
 
-.fcb-wrap, .frb-wrap{
+.pagination > li.sleep > a span {
+    opacity: 0.8;
+    color: #000;
+}
+
+.fcb-wrap , .frb-wrap {
     display: inline-block;
     margin-bottom: 5px;
-	input{
-        &:checked + label{
+    input {
+        position: absolute;
+        left: -999em;
+        &:checked + label {
             background-position: 0 -20px;
         }
-	}
-	label{
-	    margin-bottom: 0;
+    }
+
+    label {
+        margin-bottom: 0;
         padding-left: 22px;
         height: 20px;
         display: inline-block;
@@ -26,11 +36,19 @@
         font-size: 15px;
         vertical-align: middle;
         cursor: pointer;
-	}
+    }
+
+    &.focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
 }
-.fcb-wrap label{
+
+.fcb-wrap label {
     background-image: url('img/web-two-style.png');
 }
-.frb-wrap label{
+
+.frb-wrap label {
     background-image: url('img/fake-radio.png');
 }
